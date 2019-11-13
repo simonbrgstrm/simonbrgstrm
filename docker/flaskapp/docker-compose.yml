@@ -1,0 +1,16 @@
+version: "3.0"
+
+services:
+
+  pyapp:
+    image: simonbrgstrm/pyapp:1.0
+    ports:
+      - "8080:5000"
+  
+  redis:
+    image: redis:5.0-alpine3.10
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
