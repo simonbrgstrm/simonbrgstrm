@@ -14,4 +14,7 @@ COPY app.py /app/app.py
 ENV FLASK_APP /app/app.py
 EXPOSE 5000
 
+LABEL version="1.0"
+LABEL maintainer="simonbrgstrm@gmail.com"
+
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
