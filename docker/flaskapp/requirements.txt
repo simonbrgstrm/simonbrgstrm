@@ -1,2 +1,0 @@
-Flask==1.0
-flask-redis==0.3
