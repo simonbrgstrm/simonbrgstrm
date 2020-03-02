@@ -3,7 +3,7 @@ title   = "Simon Bergstrom"
 
 DefaultContentLanguage = "en"
 
-theme = "hello-friend-ng"
+theme = "theme"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -108,7 +108,7 @@ disableHugoGeneratorInject = false
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/simonbrgstrm"
+    url  = "https://www.linkedin.com/in/simonbrgstrm/"
 
   [[params.social]]
     name = "stackoverflow"

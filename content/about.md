@@ -1,15 +1,16 @@
 +++
 title = "About"
-date = "2014-04-09"
-aliases = ["about-us","about-hugo","contact"]
+date = "2020-03-01"
+aliases = ["about","contact"]
 [ author ]
   name = "Simon Bergstrom"
 +++
 
 Simon Bergstrom's personal website.
 
-### Tech / Tools
+---
 
+### Tech / Tools
 * [Bash] - Shell scripting / Linux administration
 * [Python] - Scripting / Simple applications 
 * [Docker] - Dockerfiles / Docker-compose / Docker swarm
@@ -18,7 +19,7 @@ Simon Bergstrom's personal website.
 * [Ansible] - Playbooks / Configuration Management / Provisioning
 * [GitHub] - Projects / Version control
 
-Contact
+---
 
 simonbrgstrm@gmail.com
 
