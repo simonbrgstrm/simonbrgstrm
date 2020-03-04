@@ -25,7 +25,7 @@ Simon Bergstrom's personal website.
 
 |                     |                     |                     |                     ||			    |			  |			|		      |||
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| ![terminal](/terminal64.png) | ![linux](/linux64.png) | ![mysql](/mysql64.png) | ![ansible](/ansible64.png) | ![redis](/redis64.png) | ![python](/python64.png) | ![mariadb](/maria64.png) | ![redis](/docker64.png) | ![mongo](/mongo64.png) | ![jenkins](/jenkins64.png) | ![bash][bashlg]
+| ![terminal](/terminal64.png) | ![linux](/linux64.png) | ![mysql](/mysql64.png) | ![ansible](/ansible64.png) | ![redis](/redis64.png) | ![python](/python64.png) | ![mariadb](/maria64.png) | ![redis](/docker64.png) | ![mongo](/mongo64.png) | ![jenkins](/jenkins64.png) | ![bash](/bash64.png)
 
 
 
