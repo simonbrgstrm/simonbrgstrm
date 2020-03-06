@@ -1,4 +1,4 @@
-baseURL = "localhost"
+baseURL = "http://simonbrgstrm.se"
 title   = "Simon Bergstrom"
 
 DefaultContentLanguage = "en"
