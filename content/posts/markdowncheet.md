@@ -9,7 +9,7 @@ tags = [
 date = "2020-03-01"
 categories = [
     "Development",
-    "golang",
+    "text",
 ]
 series = [""]
 [ author ]
