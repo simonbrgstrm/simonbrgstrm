@@ -1,4 +1,4 @@
-baseURL = "http://simonbrgstrm.se"
+baseURL = "https://simonbrgstrm.se"
 title   = "Simon Bergstrom"
 
 DefaultContentLanguage = "en"
@@ -7,9 +7,6 @@ theme = "theme"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
-
-rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 # googleAnalytics = ""
 # disqusShortname = ""
@@ -54,7 +51,7 @@ disableHugoGeneratorInject = false
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "Nice theme for homepages and blogs"
+  description = "simonbrgstrm"
   keywords = ""
   images = [""]
 
@@ -118,7 +115,7 @@ disableHugoGeneratorInject = false
   [languages.en]
     subtitle  = "simonbrgstrm"
     weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    copyright = '<a href="https://simonbrgstrm.se" target="_blank" rel="noopener">simonbrgstrm.se</a>'
 
 [menu]
   [[menu.main]]
