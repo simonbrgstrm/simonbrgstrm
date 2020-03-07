@@ -64,4 +64,4 @@ sudo microk8s.disable dashboard
 
 ---
 
-More microk8s to come - istio, knative and openfaas.
+More microk8s to come - helm, istio, knative and openfaas.
