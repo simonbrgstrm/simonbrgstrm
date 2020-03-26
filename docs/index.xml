@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simon Bergstrom</title>
+    <link>https://simonbrgstrm.se/</link>
+    <description>Recent content on Simon Bergstrom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://simonbrgstrm.se&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simonbrgstrm.se&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://simonbrgstrm.se/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>microk8s intro</title>
+      <link>https://simonbrgstrm.se/posts/2020/03/microk8s-intro/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://simonbrgstrm.se/posts/2020/03/microk8s-intro/</guid>
+      <description>MicroK8s is a CNCF certified upstream Kubernetes deployment that runs entirely on your workstation or edge device. Being a snap it runs all Kubernetes services natively (i.e. no virtual machines) while packing the entire set of libraries and binaries needed. Installation is limited by how fast you can download a couple of hundred megabytes and the removal of MicroK8s leaves nothing behind.
+ Install snap install microk8s --classic --channel=1.17/stable Status sudo microk8s.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://simonbrgstrm.se/about/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://simonbrgstrm.se/about/</guid>
+      <description>Simon Bergstrom&amp;rsquo;s personal website.
+ Tech / Tools  Bash - Shell scripting / Linux administration Python - Scripting / Simple applications Docker - Dockerfiles / Docker-compose / Docker swarm Kubernetes - Orchestration / Helm / Istio Jenkins - Automation / CICD / Jenkinsfiles Ansible - Playbooks / Configuration Management / Provisioning GitHub - Projects / Version control Databases - MySQL / MariaDB / Redis / MongoDB                                   </description>
+    </item>
+    
+    <item>
+      <title>Markdown Cheatsheet</title>
+      <link>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</guid>
+      <description>Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6  Emphasis italics, *asterisks* or _underscores_. Bold, **asterisks** or __underscores__. Combined emphasis with **asterisks and _underscores_**. Strikethrough, ~~Scratch this.~~ italics, asterisks or underscores.
+Bold, asterisks or underscores.
+Combined emphasis with asterisks and underscores.
+Strikethrough, Scratch this.
+ List 1. First ordered list item 2. Another item 4. And another item. * Unordered list can use asterisks - Or minuses + Or pluses  First ordered list item Another item And another item.</description>
+    </item>
+    
+  </channel>
+</rss>
