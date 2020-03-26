@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Simon Bergstrom</title>
-    <link>https://simonbrgstrm.se/tags/</link>
+    <link>https://simonbrgstrm.github.io/simonbrgstrm/tags/</link>
     <description>Recent content in Tags on Simon Bergstrom</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://simonbrgstrm.se&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simonbrgstrm.se&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://simonbrgstrm.se/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://simonbrgstrm.github.io/simonbrgstrm/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>DevOps</title>
-      <link>https://simonbrgstrm.se/tags/devops/</link>
+      <link>https://simonbrgstrm.github.io/simonbrgstrm/tags/devops/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://simonbrgstrm.se/tags/devops/</guid>
+      <guid>https://simonbrgstrm.github.io/simonbrgstrm/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
-      <link>https://simonbrgstrm.se/tags/kubernetes/</link>
+      <link>https://simonbrgstrm.github.io/simonbrgstrm/tags/kubernetes/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://simonbrgstrm.se/tags/kubernetes/</guid>
+      <guid>https://simonbrgstrm.github.io/simonbrgstrm/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>microk8s</title>
-      <link>https://simonbrgstrm.se/tags/microk8s/</link>
+      <link>https://simonbrgstrm.github.io/simonbrgstrm/tags/microk8s/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://simonbrgstrm.se/tags/microk8s/</guid>
+      <guid>https://simonbrgstrm.github.io/simonbrgstrm/tags/microk8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cheatsheet</title>
-      <link>https://simonbrgstrm.se/tags/cheatsheet/</link>
+      <link>https://simonbrgstrm.github.io/simonbrgstrm/tags/cheatsheet/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://simonbrgstrm.se/tags/cheatsheet/</guid>
+      <guid>https://simonbrgstrm.github.io/simonbrgstrm/tags/cheatsheet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>https://simonbrgstrm.se/tags/markdown/</link>
+      <link>https://simonbrgstrm.github.io/simonbrgstrm/tags/markdown/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://simonbrgstrm.se/tags/markdown/</guid>
+      <guid>https://simonbrgstrm.github.io/simonbrgstrm/tags/markdown/</guid>
       <description></description>
     </item>
     
