@@ -12,6 +12,25 @@
     
     
     <item>
+      <title>Vim Cheat Sheet</title>
+      <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2021/05/vim-cheat-sheet/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://simonbrgstrm.github.io/simonbrgstrm/posts/2021/05/vim-cheat-sheet/</guid>
+      <description>Global :h keyword - open help for keyword
+:ter - open terminal
+Cursor movement h - move cursor left
+j - move cursor down
+k - move cursor up
+l - move cursor right
+H - move to top of screen
+M - move to middle of screen
+L - move to bottom of screen
+w - jump forwards to the start of a word
+W - jump forwards to the start of a word (words can contain punctuation)</description>
+    </item>
+    
+    <item>
       <title>microk8s intro</title>
       <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/microk8s-intro/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
