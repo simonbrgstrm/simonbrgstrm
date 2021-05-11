@@ -1,0 +1,226 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Simon Bergstrom</title><link>https://simonbrgstrm.se/posts/</link><description>Recent content in Posts on Simon Bergstrom</description><generator>Hugo -- gohugo.io</generator><copyright>&lt;a href="https://simonbrgstrm.se" target="_blank" rel="noopener">simonbrgstrm.se&lt;/a></copyright><lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://simonbrgstrm.se/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>microk8s intro</title><link>https://simonbrgstrm.se/posts/2020/03/microk8s-intro/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2020/03/microk8s-intro/</guid><description>MicroK8s is a CNCF certified upstream Kubernetes deployment that runs entirely on your workstation or edge device. Being a snap it runs all Kubernetes services natively (i.e. no virtual machines) while packing the entire set of libraries and binaries needed. Installation is limited by how fast you can download a couple of hundred megabytes and the removal of MicroK8s leaves nothing behind.
+Install snap install microk8s --classic --channel=1.17/stable Status sudo microk8s.</description><content type="html"><![CDATA[<hr>
+<p>MicroK8s is a CNCF certified upstream Kubernetes deployment that runs entirely on your workstation or edge device. Being a snap it runs all Kubernetes services natively (i.e. no virtual machines) while packing the entire set of libraries and binaries needed. Installation is limited by how fast you can download a couple of hundred megabytes and the removal of MicroK8s leaves nothing behind.</p>
+<hr>
+<h3 id="install">Install</h3>
+<pre><code>snap install microk8s --classic --channel=1.17/stable
+</code></pre><h3 id="status">Status</h3>
+<pre><code>sudo microk8s.status
+</code></pre><pre><code>microk8s is running
+addons:
+cilium: disabled
+dashboard: disabled
+dns: enabled
+fluentd: disabled
+gpu: disabled
+helm: disabled
+ingress: enabled
+istio: enabled
+jaeger: disabled
+knative: disabled
+linkerd: disabled
+metrics-server: disabled
+prometheus: disabled
+rbac: disabled
+registry: enabled
+storage: enabled
+</code></pre><h3 id="addons">Addons</h3>
+<p>Enable addon</p>
+<pre><code>sudo microk8s.enable storage dashboard ingress
+</code></pre><p>Disable addon</p>
+<pre><code>sudo microk8s.disable dashboard
+</code></pre><p>Common addons</p>
+<ul>
+<li>dns: Deploy DNS. This addon may be required by others, thus we recommend you always enable it.</li>
+<li>dashboard: Deploy kubernetes dashboard as well as grafana and influxdb.</li>
+<li>storage: Create a default storage class. This storage class makes use of the hostpath-provisioner pointing to a directory on the host.</li>
+<li>ingress: Create an ingress controller.</li>
+<li>gpu: Expose GPU(s) to MicroK8s by enabling the nvidia-docker runtime and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to be already installed on the host system.</li>
+<li>istio: Deploy the core Istio services. You can use the microk8s.istioctl command to manage your deployments.</li>
+<li>registry: Deploy a docker private registry and expose it on localhost:32000. The storage addon will be enabled as part of this addon.</li>
+</ul>
+<hr>
+<p>More microk8s to come - Service, deploy, ingress, helm, istio, knative and openfaas.</p>
+]]></content></item><item><title>Markdown Cheatsheet</title><link>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</guid><description>Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6 Emphasis italics, *asterisks* or _underscores_. Bold, **asterisks** or __underscores__. Combined emphasis with **asterisks and _underscores_**. Strikethrough, ~~Scratch this.~~ italics, asterisks or underscores.
+Bold, asterisks or underscores.
+Combined emphasis with asterisks and underscores.
+Strikethrough, Scratch this.
+List 1. First ordered list item 2. Another item 4. And another item. * Unordered list can use asterisks - Or minuses + Or pluses First ordered list item Another item And another item.</description><content type="html"><![CDATA[<hr>
+<h2 id="headers">Headers</h2>
+<pre><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+</code></pre><h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<hr>
+<h2 id="emphasis">Emphasis</h2>
+<pre><code>italics, *asterisks* or _underscores_.
+
+Bold, **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough, ~~Scratch this.~~
+</code></pre><p>italics, <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Bold, <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough, <del>Scratch this.</del></p>
+<hr>
+<h2 id="list">List</h2>
+<pre><code>1. First ordered list item
+2. Another item
+4. And another item.
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+</code></pre><ol>
+<li>First ordered list item</li>
+<li>Another item</li>
+<li>And another item.</li>
+</ol>
+<ul>
+<li>Unordered list can use asterisks</li>
+</ul>
+<ul>
+<li>Or minuses</li>
+</ul>
+<ul>
+<li>Or pluses</li>
+</ul>
+<hr>
+<h2 id="links">Links</h2>
+<pre><code>[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com &quot;Google's Homepage&quot;)
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or &lt;http://www.example.com&gt; and sometimes
+example.com
+</code></pre><p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+<p>Or leave it empty and use the [link text itself].</p>
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+<a href="http://www.example.com">http://www.example.com</a> or <a href="http://www.example.com">http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p>
+<hr>
+<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h2>
+<pre><code>Inline `code` has `back-ticks around` it.
+</code></pre><p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<pre><code>```javascript
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s); ```
+
+```python
+s = &quot;Python syntax highlighting&quot;
+print s ```
+
+``` No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;. ```
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;JavaScript syntax highlighting&#34;</span>;
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">s</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Python syntax highlighting&#34;</span>
+<span style="color:#66d9ef">print</span> s
+</code></pre></div><pre><code>No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre><hr>
+<h2 id="tables">Tables</h2>
+<pre><code>Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+</code></pre><p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&rsquo;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="blockquotes">Blockquotes</h2>
+<pre><code>&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; Cont... 
+</code></pre><blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>Continue..</p>
+</blockquote>
+<hr>
+<h2 id="heading"></h2>
+]]></content></item></channel></rss>
