@@ -1,12 +1,20 @@
----
-title: "Vim Cheat Sheet"
-date: 2021-05-11T11:34:51+02:00
-draft: false
-toc: false
-images:
-tags:
-  - vim 
-  - linux
++++
+title = "Vim Cheat Sheet"
+description = ""
+type = ["posts","post"]
+tags = [
+    "Vim",
+    "cheatsheet",
+]
+date = "2021-05-11"
+categories = [
+    "Development",
+    "text",
+]
+series = [""]
+[ author ]
+  name = "Simon Bergstrom"
++++
 ---
 
 ## Global
