@@ -1,7 +1,7 @@
 ---
 title: "Vim Cheat Sheet"
 date: 2021-05-11T11:34:51+02:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
