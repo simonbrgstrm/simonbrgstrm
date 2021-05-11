@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Simon Bergstrom</title><link>https://simonbrgstrm.se/posts/</link><description>Recent content in Posts on Simon Bergstrom</description><generator>Hugo -- gohugo.io</generator><copyright>&lt;a href="https://simonbrgstrm.se" target="_blank" rel="noopener">simonbrgstrm.se&lt;/a></copyright><lastBuildDate>Tue, 11 May 2021 11:34:51 +0200</lastBuildDate><atom:link href="https://simonbrgstrm.se/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim Cheat Sheet</title><link>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</link><pubDate>Tue, 11 May 2021 11:34:51 +0200</pubDate><guid>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</guid><description>Global :h keyword - open help for keyword
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Simon Bergstrom</title><link>https://simonbrgstrm.se/posts/</link><description>Recent content in Posts on Simon Bergstrom</description><generator>Hugo -- gohugo.io</generator><copyright>&lt;a href="https://simonbrgstrm.se" target="_blank" rel="noopener">simonbrgstrm.se&lt;/a></copyright><lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://simonbrgstrm.se/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim Cheat Sheet</title><link>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</link><pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</guid><description>Global :h keyword - open help for keyword
 :ter - open terminal
 Cursor movement h - move cursor left
 j - move cursor down
@@ -8,7 +8,8 @@ H - move to top of screen
 M - move to middle of screen
 L - move to bottom of screen
 w - jump forwards to the start of a word
-W - jump forwards to the start of a word (words can contain punctuation)</description><content type="html"><![CDATA[<h2 id="global">Global</h2>
+W - jump forwards to the start of a word (words can contain punctuation)</description><content type="html"><![CDATA[<hr>
+<h2 id="global">Global</h2>
 <p><code>:h keyword</code> - open help for keyword</p>
 <p><code>:ter</code> - open terminal</p>
 <h2 id="cursor-movement">Cursor movement</h2>
