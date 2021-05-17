@@ -127,6 +127,13 @@ series = [""]
 
 `x` - delete (cut) character
 
+`<leader> y` - copy to system clipboard
+
+`<leader> p` - paste from system clipboard
+
+`<leader> Y` - copy to pastebin
+
+
 ## Editing
 
 `r` - replace a single character
