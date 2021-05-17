@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>text on Simon Bergstrom</title>
-    <link>https://simonbrgstrm.github.io/simonbrgstrm/categories/text/</link>
-    <description>Recent content in text on Simon Bergstrom</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <copyright>&lt;a href=&#34;https://simonbrgstrm.se&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simonbrgstrm.se&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://simonbrgstrm.github.io/simonbrgstrm/categories/text/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Vim Cheat Sheet</title>
-      <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2021/05/vim-cheat-sheet/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://simonbrgstrm.github.io/simonbrgstrm/posts/2021/05/vim-cheat-sheet/</guid>
-      <description>Global :h keyword - open help for keyword
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>text on Simon Bergstrom</title><link>https://simonbrgstrm.se/categories/text/</link><description>Recent content in text on Simon Bergstrom</description><generator>Hugo -- gohugo.io</generator><copyright>&lt;a href="https://simonbrgstrm.se" target="_blank" rel="noopener">simonbrgstrm.se&lt;/a></copyright><lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://simonbrgstrm.se/categories/text/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim Cheat Sheet</title><link>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</link><pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</guid><description>Global :h keyword - open help for keyword
 :ter - open terminal
 Cursor movement h - move cursor left
 j - move cursor down
@@ -27,21 +8,8 @@ H - move to top of screen
 M - move to middle of screen
 L - move to bottom of screen
 w - jump forwards to the start of a word
-W - jump forwards to the start of a word (words can contain punctuation)</description>
-    </item>
-    
-    <item>
-      <title>Markdown Cheatsheet</title>
-      <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/markdown-cheatsheet/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/markdown-cheatsheet/</guid>
-      <description>Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6  Emphasis italics, *asterisks* or _underscores_. Bold, **asterisks** or __underscores__. Combined emphasis with **asterisks and _underscores_**. Strikethrough, ~~Scratch this.~~ italics, asterisks or underscores.
+W - jump forwards to the start of a word (words can contain punctuation)</description></item><item><title>Markdown Cheatsheet</title><link>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</guid><description>Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6 Emphasis italics, *asterisks* or _underscores_. Bold, **asterisks** or __underscores__. Combined emphasis with **asterisks and _underscores_**. Strikethrough, ~~Scratch this.~~ italics, asterisks or underscores.
 Bold, asterisks or underscores.
 Combined emphasis with asterisks and underscores.
 Strikethrough, Scratch this.
- List 1. First ordered list item 2. Another item 4. And another item. * Unordered list can use asterisks - Or minuses + Or pluses  First ordered list item Another item And another item.</description>
-    </item>
-    
-  </channel>
-</rss>
+List 1. First ordered list item 2. Another item 4. And another item. * Unordered list can use asterisks - Or minuses + Or pluses First ordered list item Another item And another item.</description></item></channel></rss>

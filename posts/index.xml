@@ -1,20 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on Simon Bergstrom</title>
-        <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/</link>
-        <description>Recent content in Posts on Simon Bergstrom</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <copyright>&lt;a href=&#34;https://simonbrgstrm.se&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simonbrgstrm.se&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
-        <atom:link href="https://simonbrgstrm.github.io/simonbrgstrm/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>Vim Cheat Sheet</title>
-            <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2021/05/vim-cheat-sheet/</link>
-            <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-            
-            <guid>https://simonbrgstrm.github.io/simonbrgstrm/posts/2021/05/vim-cheat-sheet/</guid>
-            <description>Global :h keyword - open help for keyword
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Simon Bergstrom</title><link>https://simonbrgstrm.se/posts/</link><description>Recent content in Posts on Simon Bergstrom</description><generator>Hugo -- gohugo.io</generator><copyright>&lt;a href="https://simonbrgstrm.se" target="_blank" rel="noopener">simonbrgstrm.se&lt;/a></copyright><lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://simonbrgstrm.se/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim Cheat Sheet</title><link>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</link><pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2021/05/vim-cheat-sheet/</guid><description>Global :h keyword - open help for keyword
 :ter - open terminal
 Cursor movement h - move cursor left
 j - move cursor down
@@ -24,8 +8,7 @@ H - move to top of screen
 M - move to middle of screen
 L - move to bottom of screen
 w - jump forwards to the start of a word
-W - jump forwards to the start of a word (words can contain punctuation)</description>
-            <content type="html"><![CDATA[<hr>
+W - jump forwards to the start of a word (words can contain punctuation)</description><content type="html"><![CDATA[<hr>
 <h2 id="global">Global</h2>
 <p><code>:h keyword</code> - open help for keyword</p>
 <p><code>:ter</code> - open terminal</p>
@@ -43,7 +26,7 @@ W - jump forwards to the start of a word (words can contain punctuation)</descri
 <p><code>E</code> - jump forwards to the end of a word (words can contain punctuation)</p>
 <p><code>b</code> - jump backwards to the start of a word</p>
 <p><code>B</code> - jump backwards to the start of a word (words can contain punctuation)</p>
-<p><code>%</code> - move to matching character (default supported pairs: &lsquo;()', &lsquo;{}', &lsquo;[]&rsquo; - use :h matchpairs in vim for more info)</p>
+<p><code>%</code> - move to matching character (default supported pairs: &lsquo;()&rsquo;, &lsquo;{}&rsquo;, &lsquo;[]&rsquo; - use :h matchpairs in vim for more info)</p>
 <p><code>0</code> - jump to the start of the line</p>
 <p><code>^</code> - jump to the first non-blank character of the line</p>
 <p><code>$</code> - jump to the end of the line</p>
@@ -81,6 +64,9 @@ W - jump forwards to the start of a word (words can contain punctuation)</descri
 <p><code>D</code> - delete (cut) to the end of the line</p>
 <p><code>d$</code> - delete (cut) to the end of the line</p>
 <p><code>x</code> - delete (cut) character</p>
+<p><code>&lt;leader&gt; y</code> - copy to system clipboard</p>
+<p><code>&lt;leader&gt; p</code> - paste from system clipboard</p>
+<p><code>&lt;leader&gt; Y</code> - copy to pastebin</p>
 <h2 id="editing">Editing</h2>
 <p><code>r</code> - replace a single character</p>
 <p><code>J</code> - join line below to the current one with one space in between</p>
@@ -186,18 +172,8 @@ W - jump forwards to the start of a word (words can contain punctuation)</descri
 <p><code>~</code> - switch case</p>
 <p><code>u</code> - change marked text to lowercase</p>
 <p><code>U</code> - change marked text to uppercase</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>microk8s intro</title>
-            <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/microk8s-intro/</link>
-            <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/microk8s-intro/</guid>
-            <description>MicroK8s is a CNCF certified upstream Kubernetes deployment that runs entirely on your workstation or edge device. Being a snap it runs all Kubernetes services natively (i.e. no virtual machines) while packing the entire set of libraries and binaries needed. Installation is limited by how fast you can download a couple of hundred megabytes and the removal of MicroK8s leaves nothing behind.
- Install snap install microk8s --classic --channel=1.17/stable Status sudo microk8s.</description>
-            <content type="html"><![CDATA[<hr>
+]]></content></item><item><title>microk8s intro</title><link>https://simonbrgstrm.se/posts/2020/03/microk8s-intro/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2020/03/microk8s-intro/</guid><description>MicroK8s is a CNCF certified upstream Kubernetes deployment that runs entirely on your workstation or edge device. Being a snap it runs all Kubernetes services natively (i.e. no virtual machines) while packing the entire set of libraries and binaries needed. Installation is limited by how fast you can download a couple of hundred megabytes and the removal of MicroK8s leaves nothing behind.
+Install snap install microk8s --classic --channel=1.17/stable Status sudo microk8s.</description><content type="html"><![CDATA[<hr>
 <p>MicroK8s is a CNCF certified upstream Kubernetes deployment that runs entirely on your workstation or edge device. Being a snap it runs all Kubernetes services natively (i.e. no virtual machines) while packing the entire set of libraries and binaries needed. Installation is limited by how fast you can download a couple of hundred megabytes and the removal of MicroK8s leaves nothing behind.</p>
 <hr>
 <h3 id="install">Install</h3>
@@ -239,21 +215,11 @@ storage: enabled
 </ul>
 <hr>
 <p>More microk8s to come - Service, deploy, ingress, helm, istio, knative and openfaas.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Markdown Cheatsheet</title>
-            <link>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/markdown-cheatsheet/</link>
-            <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://simonbrgstrm.github.io/simonbrgstrm/posts/2020/03/markdown-cheatsheet/</guid>
-            <description>Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6  Emphasis italics, *asterisks* or _underscores_. Bold, **asterisks** or __underscores__. Combined emphasis with **asterisks and _underscores_**. Strikethrough, ~~Scratch this.~~ italics, asterisks or underscores.
+]]></content></item><item><title>Markdown Cheatsheet</title><link>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://simonbrgstrm.se/posts/2020/03/markdown-cheatsheet/</guid><description>Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6 Emphasis italics, *asterisks* or _underscores_. Bold, **asterisks** or __underscores__. Combined emphasis with **asterisks and _underscores_**. Strikethrough, ~~Scratch this.~~ italics, asterisks or underscores.
 Bold, asterisks or underscores.
 Combined emphasis with asterisks and underscores.
 Strikethrough, Scratch this.
- List 1. First ordered list item 2. Another item 4. And another item. * Unordered list can use asterisks - Or minuses + Or pluses  First ordered list item Another item And another item.</description>
-            <content type="html"><![CDATA[<hr>
+List 1. First ordered list item 2. Another item 4. And another item. * Unordered list can use asterisks - Or minuses + Or pluses First ordered list item Another item And another item.</description><content type="html"><![CDATA[<hr>
 <h2 id="headers">Headers</h2>
 <pre><code># H1
 ## H2
@@ -367,25 +333,25 @@ Markdown | Less | Pretty
 <thead>
 <tr>
 <th>Tables</th>
-<th align="center">Are</th>
-<th align="right">Cool</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>col 3 is</td>
-<td align="center">right-aligned</td>
-<td align="right">$1600</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
 </tr>
 <tr>
 <td>col 2 is</td>
-<td align="center">centered</td>
-<td align="right">$12</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
 </tr>
 <tr>
 <td>zebra stripes</td>
-<td align="center">are neat</td>
-<td align="right">$1</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
 </tr>
 </tbody>
 </table>
@@ -431,8 +397,4 @@ This line is part of the same quote.</p>
 </blockquote>
 <hr>
 <h2 id="heading"></h2>
-]]></content>
-        </item>
-        
-    </channel>
-</rss>
+]]></content></item></channel></rss>
