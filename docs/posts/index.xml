@@ -81,6 +81,9 @@ W - jump forwards to the start of a word (words can contain punctuation)</descri
 <p><code>D</code> - delete (cut) to the end of the line</p>
 <p><code>d$</code> - delete (cut) to the end of the line</p>
 <p><code>x</code> - delete (cut) character</p>
+<p><code>&lt;leader&gt; y</code> - copy to system clipboard</p>
+<p><code>&lt;leader&gt; p</code> - paste from system clipboard</p>
+<p><code>&lt;leader&gt; Y</code> - copy to pastebin</p>
 <h2 id="editing">Editing</h2>
 <p><code>r</code> - replace a single character</p>
 <p><code>J</code> - join line below to the current one with one space in between</p>
