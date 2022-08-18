@@ -1,3 +1,3 @@
 ### ⚡
 
-www.simonbrgstrm.se
+https://simonbrgstrm.se
