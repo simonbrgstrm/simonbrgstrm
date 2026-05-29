@@ -1,27 +1,36 @@
 {{ define "main" }}
-    <main class="post">
+    {{- $isAbout := and .File (eq .File.BaseFileName "about") -}}
+    <main class="page{{ if $isAbout }} about-page{{ end }}">
+        <header class="page-header">
+            <p class="section-label">{{ if $isAbout }}Profile{{ else }}Page{{ end }}</p>
+            <h1 class="post-title">{{ .Title | markdownify }}</h1>
+        </header>
 
-        <div class="post-info">
+        <div class="meta-grid">
             {{ if .IsTranslated }}
                 <p>
-                    {{ i18n "postAvailable" }}
-                    {{ range .Translations }}
-                        <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
-                    {{ end}}
+                    <span class="meta-key">{{ i18n "postAvailable" }}</span>
+                    <span class="meta-value">
+                        {{ range .Translations }}
+                            <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
+                        {{ end}}
+                    </span>
                 </p>
             {{ end }}
+            <p>
+                <span class="meta-key">Updated</span>
+                <time class="meta-value" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">
+                    {{ if .Site.Params.dateformNum }}{{ dateFormat .Site.Params.dateformNum .Lastmod.Local }}{{ else }}{{ dateFormat "2006-01-02" .Lastmod.Local }}{{ end }}
+                </time>
+            </p>
         </div>
 
-        <article>
-            <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
-
+        <article class="page-article">
             {{- if .Params.toc }}
-                <hr />
                 <aside id="toc">
-                <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+                    <div class="toc-title">{{ i18n "tableOfContents" }}</div>
                     {{ .TableOfContents }}
                 </aside>
-                <hr />
             {{- end }}
 
             {{ with .Params.Cover }}
@@ -33,27 +42,36 @@
             </div>
         </article>
 
-        <hr />
-
-        <div class="post-info">
-  				{{- with .Params.tags }}
-  				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
-  					{{- range . -}}
-  					     <span class="tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{.}}</a></span>
-  					{{- end }}
-  				</p>
-  				{{- end }}
+        {{- if or .Params.tags .GitInfo }}
+            <div class="meta-grid">
+                {{- with .Params.tags }}
+                    <p>
+                        <span class="meta-key">Tags</span>
+                        <span class="meta-value meta-tags">
+                            {{- range . -}}
+                                <span class="tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></span>
+                            {{- end }}
+                        </span>
+                    </p>
+                {{- end }}
 
                 {{- if .GitInfo }}
-  				    <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="{{ .Site.Params.gitUrl -}}{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a> @ {{ if .Site.Params.dateformNum }}{{ dateFormat .Site.Params.dateformNum .GitInfo.AuthorDate.Local }}{{ else }}{{ dateFormat "2006-01-02" .GitInfo.AuthorDate.Local }}{{ end }}</p>
-  				{{- end }}
-  			</div>
+                    <p>
+                        <span class="meta-key">Revision</span>
+                        <span class="meta-value">
+                            <a href="{{ .Site.Params.gitUrl -}}{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
+                            @
+                            {{ if .Site.Params.dateformNum }}{{ dateFormat .Site.Params.dateformNum .GitInfo.AuthorDate.Local }}{{ else }}{{ dateFormat "2006-01-02" .GitInfo.AuthorDate.Local }}{{ end }}
+                        </span>
+                    </p>
+                {{- end }}
+            </div>
+        {{- end }}
 
         {{ if .Params.comments }}
-          <div id="comments" class="thin">
-      		    {{- partial "comments.html" . -}}
-      		</div>
+            <div id="comments" class="thin">
+                {{- partial "comments.html" . -}}
+            </div>
         {{ end }}
     </main>
 {{ end }}
