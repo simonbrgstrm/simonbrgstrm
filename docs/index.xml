@@ -47,7 +47,7 @@ W - jump forwards to the start of a word (words can contain punctuation)</descri
       
       <guid>https://simonbrgstrm.github.io/simonbrgstrm/about/</guid>
       <description>Simon Bergstrom&amp;rsquo;s personal website.
- Tech / Tools  Bash - Shell scripting / Linux administration Python - Scripting / Simple applications Docker - Dockerfiles / Docker-compose / Docker swarm Kubernetes - Orchestration / Helm / Istio Jenkins - Automation / CICD / Jenkinsfiles Ansible - Playbooks / Configuration Management / Provisioning GitHub - Projects / Version control Databases - MySQL / MariaDB / Redis / MongoDB                                   </description>
+ Tech / Tools  Bash - Shell scripting / Linux administration Python - Scripting / Simple applications Docker - Dockerfiles / Docker-compose / Docker swarm Kubernetes - Orchestration / Helm / ArgoCD Jenkins - Automation / CICD / Jenkinsfiles Ansible - Playbooks / Configuration Management / Provisioning GitHub - Projects / Version control Databases - MySQL / MariaDB / Redis / MongoDB                                   </description>
     </item>
     
     <item>
