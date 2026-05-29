@@ -3,21 +3,26 @@
 const getTheme = window.localStorage && window.localStorage.getItem("theme");
 const themeToggle = document.querySelector(".theme-toggle");
 const isDark = getTheme === "dark";
-var metaThemeColor = document.querySelector("meta[name=theme-color]");
+const metaThemeColor = document.querySelector("meta[name=theme-color]");
+const DARK_THEME_COLOR = "#000000";
+const LIGHT_THEME_COLOR = "#F5F5F5";
 
 if (getTheme !== null) {
   document.body.classList.toggle("dark-theme", isDark);
-  isDark ? metaThemeColor.setAttribute("content", "#252627") : metaThemeColor.setAttribute("content", "#fafafa");
+  metaThemeColor && metaThemeColor.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
 }
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-  window.localStorage &&
-    window.localStorage.setItem(
-      "theme",
-      document.body.classList.contains("dark-theme") ? "dark" : "light",
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    window.localStorage &&
+      window.localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark-theme") ? "dark" : "light",
+      );
+    metaThemeColor && metaThemeColor.setAttribute(
+      "content",
+      document.body.classList.contains("dark-theme") ? DARK_THEME_COLOR : LIGHT_THEME_COLOR,
     );
-  document.body.classList.contains("dark-theme") ?
-    metaThemeColor.setAttribute("content", "#252627") : metaThemeColor.setAttribute("content", "#fafafa");
-  ;
-});
+  });
+}

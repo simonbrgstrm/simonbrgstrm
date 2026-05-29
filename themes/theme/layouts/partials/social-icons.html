@@ -1,3 +1,5 @@
-{{ range . -}}
-    &nbsp; <a href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name | humanize }}">{{ partial "svg.html" . }}</a> &nbsp;
-{{- end -}}
+<div class="social-links">
+    {{ range . -}}
+        <a class="social-link" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name | humanize }}" aria-label="{{ .name | humanize }}">{{ partial "svg.html" . }}</a>
+    {{- end }}
+</div>

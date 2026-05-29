@@ -2,7 +2,8 @@
     <ul class="menu__inner">
         {{- $currentPage := . -}}
         {{ range .Site.Menus.main -}}
-            <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+            {{- $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+            <li><a {{ if $isActive }}class="active"{{ end }} href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
         {{- end }}
     </ul>
 </nav>

@@ -1,17 +1,32 @@
 {{ define "main" }}
-    <main aria-role="main">
-        <div>
-            <h1>{{ .Site.Title }}</h1>
+    <main class="home" aria-label="Homepage">
+        <section class="home__primary">
+            <p class="home__label">Profile</p>
+            <h1 class="home__title">{{ .Site.Title }}</h1>
+        </section>
 
+        <section class="home__secondary">
             {{- with .Site.Params.homeSubtitle }}
-                <p>{{.}}</p>
+                <p class="home__subtitle">{{ . }}</p>
             {{- end }}
 
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
-            {{- end }}
-        </div>
+            <div class="home__meta">
+                <p class="home__meta-row">
+                    <span class="home__key">Status</span>
+                    <span class="home__value home__value--accent">ONLINE</span>
+                </p>
+                <p class="home__meta-row">
+                    <span class="home__key">Updated</span>
+                    <time class="home__value" datetime="{{ now.Format "2006-01-02" }}">{{ now.Format "2006-01-02" }}</time>
+                </p>
+            </div>
+        </section>
+
+        {{- with .Site.Params.social }}
+            <section class="home__tertiary">
+                <p class="home__label">Network</p>
+                {{ partial "social-icons.html" . }}
+            </section>
+        {{- end }}
     </main>
 {{ end }}
