@@ -6,26 +6,30 @@ import { projects } from '../data/site';
 const lines = [
   ['Terminal', 'first.'],
   ['Browser', 'next.'],
+  ['Mobile', 'last.'],
 ];
 
 const setup = [
   ['compositor', 'niri'],
-  ['shell', 'dms'],
+  ['shell', 'zsh'],
   ['terminal', 'alacritty'],
   ['session', 'tmux'],
 ];
 
-const tiles = `+--------+ +----+
-|        | | >_ |
-|        | |    |
-|        | +----+
-|        | |    |
-+--------+ +----+`;
+const tiles = String.raw` _____________
+|             |
+|             |
+|             |
+| >_          |
+|_____________|`;
 ---
 
 <section class="tagline-section container" aria-label="At home in the terminal">
   <div class="tagline-layout">
-    <h2 class="tagline heading-2" aria-label="Terminal first. Browser next.">
+    <h2
+      class="tagline heading-2"
+      aria-label="Terminal first. Browser next. Mobile last."
+    >
       {lines.map((line) => (
         <span class="tagline-line" aria-hidden="true">
           {line.map((word, index) => (
@@ -52,7 +56,7 @@ const tiles = `+--------+ +----+
           <span class="terminal-prompt" aria-hidden="true">
             ~ $
           </span>
-          <code>cat desktop.conf</code>
+          <code>cat dotfiles.conf</code>
         </p>
         <div class="terminal-fetch">
           <pre class="terminal-tiles caption-5" aria-hidden="true">{tiles}</pre>
@@ -84,7 +88,7 @@ const tiles = `+--------+ +----+
         </p>
       </div>
       <div class="terminal-status caption-4">
-        <span class="terminal-session">[portfolio]</span>
+        <span class="terminal-session">[k8s]</span>
         <span class="terminal-active">0:stack*</span>
         <span class="terminal-status-label">tmux</span>
       </div>
