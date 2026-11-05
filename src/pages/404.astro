@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+---
+
+<Layout
+  title={`Page not found | ${site.name}`}
+  description="This page is not here. Find your way back to Simon's projects."
+  noindex
+>
+  <section class="not-found container" aria-labelledby="not-found-title">
+    <span class="caption-3 accent">404 / a wrong turn</span>
+    <h1 class="heading-1" id="not-found-title">
+      Not every idea
+      <br />
+      ends up here.
+    </h1>
+    <p class="body-3">
+      This page may have moved, or it may never have existed. The projects are
+      still a good place to start.
+    </p>
+    <a class="button button-md" href="/#projects">
+      Back to projects <Icon name="arrow-right" />
+    </a>
+  </section>
+</Layout>

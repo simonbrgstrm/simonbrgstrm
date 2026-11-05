@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+---
+
+<Layout
+  title={`Privacy | ${site.name}`}
+  description="How this personal portfolio handles privacy."
+  noindex
+>
+  <article class="document container">
+    <a href="/" class="back-link text-link title-4">
+      Back to home <Icon />
+    </a>
+    <h1 class="heading-2">Your visit, without the tracking.</h1>
+    <p class="document-intro body-3">
+      This is a static portfolio. It introduces my projects and links to their
+      own websites.
+    </p>
+    <section class="document-section">
+      <h2 class="heading-5">What this page collects</h2>
+      <p class="body-3">
+        This site does not use analytics, advertising scripts, tracking cookies,
+        or contact forms. Fonts and preview images are served with the site. It
+        does not store your preferences or activity in your browser.
+      </p>
+    </section>
+    <section class="document-section">
+      <h2 class="heading-5">Hosting and external links</h2>
+      <p class="body-3">
+        Hosting services can receive the information needed to serve a request,
+        such as an IP address and browser request details. The projects and
+        other websites linked here are separate services, with their own privacy
+        practices.
+      </p>
+    </section>
+    <section class="document-section">
+      <h2 class="heading-5">Getting in touch</h2>
+      <p class="body-3">
+        The email link opens your email application. If you send a message, it
+        is handled by the email services involved, not by a form on this
+        website. For questions about this page,{' '}
+        <a href={`mailto:${site.email}`}>email Simon</a>.
+      </p>
+    </section>
+  </article>
+</Layout>

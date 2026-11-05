@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+---
+
+<Layout
+  title={`Terms | ${site.name}`}
+  description="A few things to know about this personal portfolio and its project links."
+  noindex
+>
+  <article class="document container">
+    <a href="/" class="back-link text-link title-4">
+      Back to home <Icon />
+    </a>
+    <h1 class="heading-2">A personal collection of projects.</h1>
+    <p class="document-intro body-3">
+      This website shares what I am building. It is not a checkout, subscription
+      service, or promise of paid work.
+    </p>
+    <section class="document-section">
+      <h2 class="heading-5">About the previews</h2>
+      <p class="body-3">
+        Project images are screenshots, not current data. Features,
+        availability, music themes, and sports information may change. Visit a
+        project directly to see its current version.
+      </p>
+    </section>
+    <section class="document-section">
+      <h2 class="heading-5">Visiting the projects</h2>
+      <p class="body-3">
+        Each linked project is a separate website. Its own access requirements
+        and terms apply when you use it. Links to GitHub and other external
+        services take you outside this portfolio.
+      </p>
+    </section>
+    <section class="document-section">
+      <h2 class="heading-5">Questions or corrections</h2>
+      <p class="body-3">
+        If a link is broken or something here needs correcting,{' '}
+        <a href={`mailto:${site.email}`}>send me an email</a>.
+      </p>
+    </section>
+  </article>
+</Layout>
