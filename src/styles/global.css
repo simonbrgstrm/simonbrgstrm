@@ -735,10 +735,53 @@ html[data-motion='full'] .tagline-word[data-active] {
   margin-bottom: var(--spacing-300);
   color: #9ccfd8;
 }
-.terminal-cursor {
+.terminal-editor-tabline {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+  padding: var(--spacing-75) var(--spacing-200);
+  background: var(--surface-raised);
+}
+.terminal-editor-label {
+  margin-left: auto;
+  color: var(--subtle);
+}
+.terminal-editor-code {
+  margin: 0;
+  padding: var(--spacing-200);
+  counter-reset: editor-line;
+}
+.terminal-editor-code span {
+  font-style: normal !important;
+}
+.terminal-editor-code .line::before {
+  display: inline-block;
+  width: 2ch;
+  margin-right: var(--spacing-200);
+  color: var(--subtle);
+  text-align: right;
+  content: counter(editor-line);
+  counter-increment: editor-line;
+}
+.terminal-editor-code .line:last-child::after {
+  display: inline-block;
   width: var(--spacing-75);
   height: var(--spacing-200);
   background: #524f67;
+  vertical-align: text-bottom;
+  content: '';
+}
+.terminal-editor-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+  padding-right: var(--spacing-200);
+  background: var(--surface-raised);
+}
+.terminal-editor-mode {
+  padding: var(--spacing-75) var(--spacing-100);
+  background: #c4a7e7;
+  color: var(--surface);
 }
 .terminal-status {
   display: flex;

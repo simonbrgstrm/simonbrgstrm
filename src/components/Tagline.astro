@@ -1,6 +1,7 @@
 ---
 import '@fontsource/geist-mono/latin-400.css';
 import '@fontsource/geist-mono/latin-500.css';
+import { Code } from 'astro:components';
 import { projects } from '../data/site';
 
 const lines = [
@@ -15,6 +16,11 @@ const setup = [
   ['terminal', 'alacritty'],
   ['session', 'tmux'],
 ];
+
+const editorConfig = `vim.g.mapleader = " "
+vim.opt.number = true
+
+require("config.lazy")`;
 
 const tiles = String.raw` _____________
 |             |
@@ -84,9 +90,25 @@ const tiles = String.raw` _____________
         </ul>
         <p class="terminal-command" aria-hidden="true">
           <span class="terminal-prompt">~/projects $</span>
-          <span class="terminal-cursor"></span>
         </p>
       </div>
+      <section class="terminal-editor" aria-label="Neovim editor illustration">
+        <div class="terminal-editor-tabline caption-4">
+          <span>init.lua</span>
+          <span class="terminal-editor-label">Neovim</span>
+        </div>
+        <Code
+          code={editorConfig}
+          lang="lua"
+          theme="rose-pine"
+          class="terminal-editor-code body-6"
+        />
+        <div class="terminal-editor-status caption-4">
+          <span class="terminal-editor-mode">NORMAL</span>
+          <span>LazyVim</span>
+          <span class="terminal-editor-label">lua</span>
+        </div>
+      </section>
       <div class="terminal-status caption-4">
         <span class="terminal-session">[k8s]</span>
         <span class="terminal-active">0:stack*</span>

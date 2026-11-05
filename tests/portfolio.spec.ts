@@ -112,7 +112,7 @@ test('390px layout keeps the action visible and navigation keyboard accessible',
 test('the visual terminal shows the desktop stack without interactive controls', async ({
   page,
 }) => {
-  for (const width of [1440, 390]) {
+  for (const width of [1440, 768, 390]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto('/');
     const terminal = page.getByRole('figure', {
@@ -122,7 +122,7 @@ test('the visual terminal shows the desktop stack without interactive controls',
     await expect(terminal).toHaveCSS('opacity', '1');
     await expect(terminal.locator('.terminal-stack dd')).toHaveText([
       'niri',
-      'dms',
+      'zsh',
       'alacritty',
       'tmux',
     ]);
@@ -131,6 +131,21 @@ test('the visual terminal shows the desktop stack without interactive controls',
       'icegrid/',
       'onemoreturn/',
     ]);
+    const editor = terminal.getByRole('region', {
+      name: 'Neovim editor illustration',
+    });
+    await expect(editor).toBeVisible();
+    await expect(editor.getByText('init.lua', { exact: true })).toBeVisible();
+    await expect(editor.getByText('LazyVim', { exact: true })).toBeVisible();
+    await expect(editor.locator('.terminal-editor-mode')).toHaveText('NORMAL');
+    await expect(editor.locator('code')).toHaveText(
+      'vim.g.mapleader = " "\nvim.opt.number = true\n\nrequire("config.lazy")',
+    );
+    expect(
+      await editor
+        .locator('pre')
+        .evaluate((element) => element.scrollWidth <= element.clientWidth),
+    ).toBe(true);
     await expect(terminal.locator('input, textarea, button')).toHaveCount(0);
     expect(
       await terminal.evaluate(
