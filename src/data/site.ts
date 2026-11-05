@@ -1,0 +1,50 @@
+export const site = {
+  name: 'Simon Bergstrom',
+  handle: 'simonbrgstrm',
+  email: 'simonbrgstrm@gmail.com',
+  github: 'https://github.com/simonbrgstrm',
+  title: 'Simon Bergstrom | Personal projects',
+  description:
+    'Friday for music, Icegrid for SHL fantasy, and One More Turn for pixel card battles. Personal projects by Simon Bergstrom.',
+};
+
+export const projects = [
+  {
+    id: 'friday',
+    name: 'Friday',
+    category: 'Music',
+    domain: 'friday.simonbrgstrm.se',
+    url: 'https://friday.simonbrgstrm.se',
+    image: '/images/friday.webp',
+    alt: 'Friday showing a weekly music theme, track submissions, and music genres.',
+    heading: 'Share a song',
+    description: 'A weekly music ritual',
+    features: ['Weekly themes', 'Song ratings', 'Shared playlists'],
+    caption: 'For the people who always have a song to recommend.',
+  },
+  {
+    id: 'icegrid',
+    name: 'Icegrid',
+    category: 'SHL fantasy',
+    domain: 'icegrid.simonbrgstrm.se',
+    url: 'https://icegrid.simonbrgstrm.se',
+    image: '/images/icegrid.webp',
+    alt: 'Icegrid showing SHL fantasy tools, upcoming fixtures, and a league overview.',
+    heading: 'Pick your lineup',
+    description: 'SHL stats for your next fantasy pick',
+    features: ['Player comparisons', 'Form guides', 'Squad planning'],
+    caption: 'For the next lineup decision, or just a deeper look.',
+  },
+  {
+    id: 'onemoreturn',
+    name: 'One More Turn',
+    category: 'Card game',
+    domain: 'onemoreturn.simonbrgstrm.se',
+    url: 'https://onemoreturn.simonbrgstrm.se/',
+    image: '/images/onemoreturn.webp',
+    alt: 'One More Turn showing pixel card battles, daily runs, and a card codex.',
+    heading: 'Build your deck',
+    description: 'Pixel card battles in your browser',
+    features: ['Deck building', 'Daily runs', 'Boss battles'],
+  },
+] as const;
