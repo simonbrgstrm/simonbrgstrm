@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+---
+
+<footer class="site-footer container">
+  <div class="footer-top">
+    <a class="title-3 footer-name" href="/">
+      {site.name}
+      <span class="accent">.</span>
+    </a>
+    <p class="body-6 muted">Built with Astro</p>
+    <a
+      class="text-link title-4"
+      href={site.github}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub <Icon />
+    </a>
+  </div>
+  <div class="footer-bottom caption-2">
+    <span class="muted">
+      &copy; {new Date().getFullYear()} {site.name}
+    </span>
+    <div class="footer-legal">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="#main">Back to top</a>
+    </div>
+  </div>
+</footer>

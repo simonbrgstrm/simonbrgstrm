@@ -1,0 +1,49 @@
+---
+import { projects } from '../data/site';
+import Icon from './Icon.astro';
+---
+
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow caption-1">
+        <span class="small-dot" aria-hidden="true"></span>Simon Bergstrom
+      </p>
+      <h1 class="heading-1" id="hero-title">
+        Side projects
+      </h1>
+      <p class="hero-description body-3">Music, hockey, and card battles</p>
+      <div class="hero-actions">
+        <a class="button button-md" href="#projects">
+          Explore projects <Icon name="arrow-right" />
+        </a>
+      </div>
+    </div>
+    <figure class="hero-visual" aria-label="Selected project previews">
+      {projects.slice(0, 2).map((project, index) => (
+        <div
+          class:list={[
+            'preview',
+            index === 0 ? 'preview-first' : 'preview-second',
+          ]}
+        >
+          <div class="preview-bar">
+            <span class="title-4">
+              {project.name}
+              <span class="accent">.</span>
+            </span>
+            <span class="preview-category caption-5">{project.category}</span>
+          </div>
+          <img
+            src={project.image}
+            alt={project.alt}
+            width="1440"
+            height="1000"
+            fetchpriority={index === 0 ? 'high' : 'auto'}
+            decoding="async"
+          />
+        </div>
+      ))}
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import arrowUpRight from '@phosphor-icons/core/assets/regular/arrow-up-right.svg?raw';
+import arrowRight from '@phosphor-icons/core/assets/regular/arrow-right.svg?raw';
+import plus from '@phosphor-icons/core/assets/regular/plus.svg?raw';
+
+interface Props {
+  name?: 'arrow-up-right' | 'arrow-right' | 'plus';
+  class?: string;
+}
+
+const { name = 'arrow-up-right', class: className = '' } = Astro.props;
+const icons = {
+  'arrow-up-right': arrowUpRight,
+  'arrow-right': arrowRight,
+  plus,
+};
+---
+
+<span
+  class:list={['icon', className]}
+  aria-hidden="true"
+  set:html={icons[name]}
+/>

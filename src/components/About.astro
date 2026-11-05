@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+---
+
+<section class="about-section section" id="about" aria-labelledby="about-title">
+  <div class="container about-layout" data-reveal>
+    <div>
+      <p class="section-kicker caption-1">
+        <span class="section-number">02</span>Behind the projects
+      </p>
+      <h2 class="heading-2" id="about-title">
+        Hi, I’m Simon.
+        <br />
+        I like making
+        <br />
+        things work.
+      </h2>
+    </div>
+    <div class="about-copy">
+      <p class="body-3">
+        My background is in Linux systems and DevOps. I spend a lot of time with
+        the things behind the screen: automation, containers, and the systems
+        that keep everything running.
+      </p>
+      <p class="body-3">
+        These projects are the other side of that. A place to follow an
+        interest, try an idea, and build something friends and colleagues can
+        actually use.
+      </p>
+      <ul class="about-tools caption-1" aria-label="Tools I work with">
+        <li>Linux</li>
+        <li>Python</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+      </ul>
+      <a
+        class="text-link title-3"
+        href={site.github}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub <Icon />
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+---
+import { projects } from '../data/site';
+import Icon from './Icon.astro';
+---
+
+<section
+  class="projects-section section"
+  id="projects"
+  aria-labelledby="projects-title"
+>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="section-kicker caption-1">
+          <span class="section-number">01</span>
+        </p>
+        <h2 class="heading-2" id="projects-title">
+          Music, hockey, cards
+        </h2>
+      </div>
+    </div>
+    <div class="projects-grid">
+      {projects.map((project, index) => (
+        <article
+          class="project"
+          aria-labelledby={`${project.id}-title`}
+          data-reveal
+        >
+          <div class="project-top">
+            <p class="title-1">
+              {project.name}
+              <span class="accent">.</span>
+            </p>
+            <span class="project-index caption-4">
+              {String(index + 1).padStart(2, '0')} /{' '}
+              {String(projects.length).padStart(2, '0')}
+            </span>
+          </div>
+          <a
+            class="project-image-link"
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${project.name} in a new tab`}
+          >
+            <img
+              src={project.image}
+              alt={project.alt}
+              width="1440"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div class="project-copy">
+            <p class="project-category caption-1">{project.category}</p>
+            <h3 class="heading-4" id={`${project.id}-title`}>
+              {project.heading}
+            </h3>
+            <p class="project-description body-3">{project.description}</p>
+            <ul
+              class="project-tags caption-4"
+              aria-label={`${project.name} features`}
+            >
+              {project.features.map((feature) => (
+                <li>{feature}</li>
+              ))}
+            </ul>
+            <div class="project-bottom">
+              <span class="project-domain caption-2">{project.domain}</span>
+              <a
+                class="text-link button-md"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open {project.name} <Icon />
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="projects-note caption-2">Screenshots, not live data</p>
+  </div>
+</section>

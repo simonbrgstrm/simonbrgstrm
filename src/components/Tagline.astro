@@ -1,0 +1,93 @@
+---
+import '@fontsource/geist-mono/latin-400.css';
+import '@fontsource/geist-mono/latin-500.css';
+import { projects } from '../data/site';
+
+const lines = [
+  ['Terminal', 'first.'],
+  ['Browser', 'next.'],
+];
+
+const setup = [
+  ['compositor', 'niri'],
+  ['shell', 'dms'],
+  ['terminal', 'alacritty'],
+  ['session', 'tmux'],
+];
+
+const tiles = `+--------+ +----+
+|        | | >_ |
+|        | |    |
+|        | +----+
+|        | |    |
++--------+ +----+`;
+---
+
+<section class="tagline-section container" aria-label="At home in the terminal">
+  <div class="tagline-layout">
+    <h2 class="tagline heading-2" aria-label="Terminal first. Browser next.">
+      {lines.map((line) => (
+        <span class="tagline-line" aria-hidden="true">
+          {line.map((word, index) => (
+            <>
+              {index > 0 && ' '}
+              <span class="tagline-word">{word}</span>
+            </>
+          ))}
+        </span>
+      ))}
+    </h2>
+    <figure
+      class="terminal-window body-6"
+      aria-label="Desktop terminal illustration"
+      data-reveal
+    >
+      <figcaption class="terminal-titlebar caption-2">
+        <span aria-hidden="true">>_</span>
+        <span>alacritty</span>
+        <span class="terminal-path">~/projects</span>
+      </figcaption>
+      <div class="terminal-screen">
+        <p class="terminal-command">
+          <span class="terminal-prompt" aria-hidden="true">
+            ~ $
+          </span>
+          <code>cat desktop.conf</code>
+        </p>
+        <div class="terminal-fetch">
+          <pre class="terminal-tiles caption-5" aria-hidden="true">{tiles}</pre>
+          <dl class="terminal-stack">
+            {setup.map(([label, value]) => (
+              <>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </>
+            ))}
+          </dl>
+        </div>
+        <p class="terminal-command">
+          <span class="terminal-prompt" aria-hidden="true">
+            ~/projects $
+          </span>
+          <code>ls</code>
+        </p>
+        <ul class="terminal-projects" aria-label="Project directories">
+          {projects.map((project) => (
+            <li>
+              <code>{project.id}/</code>
+            </li>
+          ))}
+        </ul>
+        <p class="terminal-command" aria-hidden="true">
+          <span class="terminal-prompt">~/projects $</span>
+          <span class="terminal-cursor"></span>
+        </p>
+      </div>
+      <div class="terminal-status caption-4">
+        <span class="terminal-session">[portfolio]</span>
+        <span class="terminal-active">0:stack*</span>
+        <span class="terminal-status-label">tmux</span>
+      </div>
+    </figure>
+  </div>
+</section>

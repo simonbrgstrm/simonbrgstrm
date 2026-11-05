@@ -1,0 +1,70 @@
+---
+interface Props {
+  home?: boolean;
+}
+const { home = false } = Astro.props;
+const prefix = home ? '' : '/';
+const links = [
+  { label: 'Projects', href: `${prefix}#projects` },
+  { label: 'About', href: `${prefix}#about` },
+];
+---
+
+<header class="site-header">
+  <nav class="navigation" aria-label="Main navigation">
+    <a
+      href="/"
+      class="brand title-3"
+      aria-label="Simon Bergstrom, home"
+      aria-current={home ? 'page' : undefined}
+    >
+      <span class="brand-mark" aria-hidden="true">
+        sb<span>.</span>
+      </span>
+    </a>
+    <div class="desktop-links">
+      {links.map((link) => (
+        <a class="nav-link title-4" href={link.href} data-section-link>
+          {link.label}
+        </a>
+      ))}
+    </div>
+    <button
+      class="menu-toggle button-sm"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Open navigation"
+      hidden
+    >
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+  </nav>
+</header>
+
+<dialog id="mobile-menu" class="mobile-menu" aria-label="Navigation">
+  <button
+    class="menu-toggle dialog-close"
+    type="button"
+    aria-label="Close navigation"
+    aria-expanded="true"
+  >
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+  </button>
+  <nav class="mobile-menu-links" aria-label="Mobile navigation">
+    {links.map((link, index) => (
+      <a
+        class="heading-3"
+        href={link.href}
+        style={`--link-delay: ${Math.min(index * 60, 400)}ms`}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a class="title-3 menu-home" href="/">
+      Back to home
+    </a>
+  </nav>
+</dialog>
