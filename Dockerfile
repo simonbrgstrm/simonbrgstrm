@@ -1,25 +1,11 @@
-FROM jguyomard/hugo-builder AS build
+FROM node:24-alpine AS build
 WORKDIR /site
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
 COPY . .
-RUN hugo
-RUN minify --recursive --verbose \
-        --match=\.*.js$ \
-        --type=js \
-        --output public/ \
-        public/
+RUN npm run build
 
-#RUN minify --recursive --verbose \
-#        --match=\.*.css$ \
-#        --type=css \
-#        --output public/ \
-#        public/
-
-RUN minify --recursive --verbose \
-        --match=\.*.html$ \
-        --type=html \
-        --output public/ \
-        public/
-
-FROM nginx:1.17-alpine
-WORKDIR /usr/share/nginx/html
-COPY --from=build /site/public .
+FROM nginx:1.28-alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /site/dist /usr/share/nginx/html
+EXPOSE 80
